@@ -1,0 +1,49 @@
+.header
+  .user-panel
+    .container
+      .row
+
+        // І-нет магазин
+        .col-md-3
+          .logo-text Інтеренет магазин
+
+        // Пошук
+        .col-md-3
+          .search
+            .form-group
+              input.form-control.search__field(type='text' name='search' placeholder='Пошук')
+        .col-md-2
+          a.btn.panel-btn.panel-btn-bookmark(href='#') Закладки
+        .col-md-2
+          a.btn.panel-btn.panel-btn-bookmark(href='#') Оформити
+        .col-md-2
+          a.btn.panel-btn.panel-btn-bookmark(href='#') Корзина
+
+  .container
+    .row
+      .col-md-4
+        .logo
+      .col-md-4
+        .contacts
+          .contacts__phone
+          .contacts__address
+      .col-md-4
+        .user-block
+          a.user-block__user-office(href='#') Базалій Юрій
+          ul.user-block__user-link-list
+            li.user-block__user-link-element
+              a(href='#') Мої замовлення
+            li.user-block__user-link-element
+              a(href='#') Власний кабінет
+
+    .row
+      .col-md-12
+        nav.main-nav
+          ul
+            - var list = ['Гловна','Каталог','Про Нас','Знижки','Спецпропозиції','Доставка','Контакти']
+              each item in list
+                if item == 'Каталог'
+                  li.main-nav__item: span= item
+                else
+                  li.main-nav__item: a.main-nav__item= item
+
