@@ -4,8 +4,8 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-const jade = require('jade');
-const gulpJade = require('gulp-jade');
+import gulpJade from 'gulp-jade';
+import deb from 'gulp-debug';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -53,7 +53,7 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('jade', function () {
+gulp.task('jade', () => {
   return gulp.src('app/*.jade')
     .pipe(gulpJade({
       pretty: true
@@ -92,15 +92,18 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/*.jade'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  })
+    .pipe(deb({title:'Copy'}))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['jade','styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -118,6 +121,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/**/*.jade', ['jade']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
