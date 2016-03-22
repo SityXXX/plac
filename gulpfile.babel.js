@@ -6,13 +6,27 @@ import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import gulpJade from 'gulp-jade';
 import deb from 'gulp-debug';
+import notify from 'gulp-notify';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
-    .pipe($.plumber())
+    .pipe(
+      $.plumber(
+        {
+          errorHandler: notify.onError(
+            function(err) {
+              return {
+                title: 'GULP ERROR',
+                message: err.message
+              }
+            }
+          )
+        }
+      )
+    )
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
       outputStyle: 'expanded',
@@ -27,7 +41,20 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
+    .pipe(
+      $.plumber(
+        {
+          errorHandler: notify.onError(
+            function(err) {
+              return {
+                title: 'GULP ERROR',
+                message: err.message
+              }
+            }
+          )
+        }
+      )
+    )
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
@@ -55,6 +82,20 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('jade', () => {
   return gulp.src('app/*.jade')
+    .pipe(
+      $.plumber(
+        {
+          errorHandler: notify.onError(
+            function(err) {
+              return {
+                title: 'GULP ERROR',
+                message: err.message
+              }
+            }
+          )
+        }
+      )
+    )
     .pipe(gulpJade({
       pretty: true
     }))
