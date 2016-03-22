@@ -22,28 +22,15 @@
   .container
     .row
       .col-md-4
-        .logo
+        a.logo: img(src='http://placehold.it/277x58')
+
       .col-md-4
-        .contacts
-          .contacts__phone
-          .contacts__address
+        include phone
+        include address
       .col-md-4
-        .user-block
-          a.user-block__user-office(href='#') Базалій Юрій
-          ul.user-block__user-link-list
-            li.user-block__user-link-element
-              a(href='#') Мої замовлення
-            li.user-block__user-link-element
-              a(href='#') Власний кабінет
+        include user-block
 
     .row
       .col-md-12
-        nav.main-nav
-          ul
-            - var list = ['Гловна','Каталог','Про Нас','Знижки','Спецпропозиції','Доставка','Контакти']
-              each item in list
-                if item == 'Каталог'
-                  li.main-nav__item: span= item
-                else
-                  li.main-nav__item: a.main-nav__item= item
+        include menu
 

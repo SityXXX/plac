@@ -1,0 +1,17 @@
+.product-filter
+  .product-filter__heading Фільтр:
+  fieldset
+    legend Ціна:
+    .product-filter__price-filter
+      .product-filter__price-filter-line
+      .product-filter__price-filter-dot-left
+      .product-filter__price-filter-dot-left
+    input.form-control.price-filter__price-from(type='text' value=0)
+    input.form-control.price-filter__price-to(type='text' value=3000)
+  fieldset
+    legend Виробники:
+    - var manufactures = {'bosch':'Bosch','interskol':'Інтерскол','makita':'Makita','devalt':'Devalt','hitacji':'Hitachi'}
+      each manufacture, id in manufactures
+        .form-group
+          input(type='checkbox' name=id id=id)
+          label= manufacture
