@@ -29,33 +29,63 @@ html(class='no-js' lang='uk')
     // endbuild
   body
 
-    include jade-blocks/header.jade
+    include jade-blocks/header
 
-    include jade-blocks/breadcrumbs.jade
+    include jade-blocks/breadcrumbs
 
     .page-content
       .container
-        h1.page-content__heading Перфоратори
+        h1.block-heading Перфоратори
         .row
+
           .col-md-3
             aside.left-side
+              include jade-blocks/product-filter
+
           .col-md-9
+
             .product-sort
+              .row
+                .col-md-3
+                  span.product-sort__label Сортувати:
+                .col-md-3
+                  a.product-sort__sort-link(href='#') По ціні
+                .col-md-3
+                  a.product-sort__sort-link(href='#') По назві
+                .col-md-3
+                  .row
+                    .col-xs-12
+                      a.product-sort__direction.product-sort__direction--asc(href='#') За зростанням
+                    .col-xs-12
+                      a.product-sort__direction.product-sort__direction--desc(href='#') За спаданням
             main
               .row
                 .col-md-4
-                  article.product
-                    .product__img
-                      img(src='http://placehold.it/220x174')
-                    .product__code 82172
-                    h2.product__name Перфоратор BOSCH BFG 3000
-                    .product__in-stock На складі: 4 шт.
-                    .product__old-price 2854.00 ГРН
-                    .product__price 2530.00 ГРН
-
+                  include jade-blocks/product-block
                 .col-md-4
+                  include jade-blocks/product-block
                 .com-md-4
+                  include jade-blocks/product-block
+              .row
+                .col-md-4
+                  include jade-blocks/product-block
+                .col-md-4
+                  include jade-blocks/product-block
+                .com-md-4
+                  include jade-blocks/product-block
+              .row
+                .col-md-4
+                  include jade-blocks/product-block
+                .col-md-4
+                  include jade-blocks/product-block
+                .com-md-4
+                  include jade-blocks/product-block
 
+            include jade-blocks/pagination
+
+    include jade-blocks/category-desc
+
+    include jade-blocks/footer
 
     // build:js scripts/plugins.js
 

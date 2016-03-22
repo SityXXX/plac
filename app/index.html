@@ -46,14 +46,10 @@
       </div>
       <div class="container">
         <div class="row">
+          <div class="col-md-4"><a class="logo"><img src="http://placehold.it/277x58"></a></div>
           <div class="col-md-4">
-            <div class="logo"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="contacts">
-              <div class="contacts__phone"></div>
-              <div class="contacts__address"></div>
-            </div>
+            <div class="phone">+38 (067) 477-44-53</div>
+            <div class="address">м.Дрогобич, вул.Гайдамацька 7/1 (0324) 41-75-75, 417-317</div>
           </div>
           <div class="col-md-4">
             <div class="user-block"><a href="#" class="user-block__user-office">Базалій Юрій</a>
@@ -66,15 +62,15 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <nav class="main-nav">
-              <ul>
-                <li class="main-nav__item"><a class="main-nav__item">Гловна</a></li>
+            <nav>
+              <ul class="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Гловна</a></li>
                 <li class="main-nav__item"><span>Каталог</span></li>
-                <li class="main-nav__item"><a class="main-nav__item">Про Нас</a></li>
-                <li class="main-nav__item"><a class="main-nav__item">Знижки</a></li>
-                <li class="main-nav__item"><a class="main-nav__item">Спецпропозиції</a></li>
-                <li class="main-nav__item"><a class="main-nav__item">Доставка</a></li>
-                <li class="main-nav__item"><a class="main-nav__item">Контакти</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Про Нас</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Знижки</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Спецпропозиції</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Доставка</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Контакти</a></li>
               </ul>
             </nav>
           </div>
@@ -90,33 +86,261 @@
     </nav>
     <div class="page-content">
       <div class="container">
-        <h1 class="page-content__heading">Перфоратори</h1>
+        <h1 class="block-heading">Перфоратори</h1>
         <div class="row">
           <div class="col-md-3">
-            <aside class="left-side"></aside>
+            <aside class="left-side">
+              <div class="product-filter">
+                <div class="product-filter__heading">Фільтр:</div>
+                <fieldset>
+                  <legend>Ціна:</legend>
+                  <div class="product-filter__price-filter">
+                    <div class="product-filter__price-filter-line"></div>
+                    <div class="product-filter__price-filter-dot-left"></div>
+                    <div class="product-filter__price-filter-dot-left"></div>
+                  </div>
+                  <input type="text" value="0" class="form-control price-filter__price-from">
+                  <input type="text" value="3000" class="form-control price-filter__price-to">
+                </fieldset>
+                <fieldset>
+                  <legend>Виробники:</legend>
+                  <div class="form-group">
+                    <input type="checkbox" name="bosch" id="bosch">
+                    <label>Bosch</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" name="interskol" id="interskol">
+                    <label>Інтерскол</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" name="makita" id="makita">
+                    <label>Makita</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" name="devalt" id="devalt">
+                    <label>Devalt</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" name="hitacji" id="hitacji">
+                    <label>Hitachi</label>
+                  </div>
+                </fieldset>
+              </div>
+            </aside>
           </div>
           <div class="col-md-9">
-            <div class="product-sort"></div>
+            <div class="product-sort">
+              <div class="row">
+                <div class="col-md-3"><span class="product-sort__label">Сортувати:</span></div>
+                <div class="col-md-3"><a href="#" class="product-sort__sort-link">По ціні</a></div>
+                <div class="col-md-3"><a href="#" class="product-sort__sort-link">По назві</a></div>
+                <div class="col-md-3">
+                  <div class="row">
+                    <div class="col-xs-12"><a href="#" class="product-sort__direction product-sort__direction--asc">За зростанням</a></div>
+                    <div class="col-xs-12"><a href="#" class="product-sort__direction product-sort__direction--desc">За спаданням</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <main>
               <div class="row">
                 <div class="col-md-4">
                   <article class="product">
+                    <div class="product__label-new">Новинка</div>
                     <div class="product__img"><img src="http://placehold.it/220x174"></div>
-                    <div class="product__code">82172</div>
-                    <h2 class="product__name">Перфоратор BOSCH BFG 3000</h2>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
                     <div class="product__in-stock">На складі: 4 шт.</div>
                     <div class="product__old-price">2854.00 ГРН</div>
                     <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
                   </article>
                 </div>
-                <div class="col-md-4"></div>
-                <div class="com-md-4"></div>
+                <div class="col-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+                <div class="com-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+                <div class="com-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
+                <div class="com-md-4">
+                  <article class="product">
+                    <div class="product__label-new">Новинка</div>
+                    <div class="product__img"><img src="http://placehold.it/220x174"></div>
+                    <div class="product__code">Код товару: (82172)</div>
+                    <h1 class="product__name">Перфоратор BOSCH BFG 3000</h1>
+                    <div class="product__in-stock">На складі: 4 шт.</div>
+                    <div class="product__old-price">2854.00 ГРН</div>
+                    <div class="product__price">2530.00 ГРН</div>
+                    <div class="product__button-block"><a href="#" class="btn btn-buy">В корзину</a><a href="#" class="btn btn-bookmark">В закладки</a></div>
+                  </article>
+                </div>
               </div>
             </main>
+            <nav>
+              <ul class="pagination">
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">Наступна</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
     </div>
+    <section class="category-desc">
+      <div class="container">
+        <h1 class="category-desc__heading"></h1>
+        <p>
+          Перфоратор — універсальний будівельний інструмент. Предназначен для сверления и долбления отверстий в кирпиче,
+          бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
+          функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном
+          устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row page-footer__top">
+          <div class="col-md-5">
+            <div class="logo-text">Інтернет магазин</div>
+            <div class="address">м.Дрогобич, вул.Гайдамацька 7/1 (0324) 41-75-75, 417-317</div>
+          </div>
+          <div class="col-md-7">
+            <nav>
+              <ul class="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Гловна</a></li>
+                <li class="main-nav__item"><span>Каталог</span></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Про Нас</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Знижки</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Спецпропозиції</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Доставка</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Контакти</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul class="menu">
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Гловна</a></li>
+                <li class="main-nav__item"><span>Каталог</span></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Про Нас</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Знижки</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Спецпропозиції</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Доставка</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__item">Контакти</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row page-footer__bottom">
+          <div class="col-md-4">
+            <div class="copyright">
+              &copy; 2010–2016 Компанія «Пляц»
+              Усі права захищено
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="social">
+              <li class="social__item"><a class="social__link social__link--vk">Вконтакті</a></li>
+              <li class="social__item"><a class="social__link social__link--fb">Facebook</a></li>
+              <li class="social__item"><a class="social__link social__link--od">Однокласники</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="page-footer__link-block">Зворотній зв'язок<a href="mailto:mail@plac.com.ua">mail@plac.com.ua</a></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="page-footer__link-block">Телефонуйте<span>+38 (067) 477-44-53</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- build:js scripts/plugins.js-->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
