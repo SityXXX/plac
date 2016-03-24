@@ -5,13 +5,13 @@
 
         // І-нет магазин
         .col-md-3
-          .logo-text Інтеренет магазин
+          a.logo-text(href='#') Інтеренет магазин
 
         // Пошук
         .col-md-3
-          .search
-            .form-group
-              input.form-control.search__field(type='text' name='search' placeholder='Пошук')
+          .form-group.search
+            input.form-control.search__field#search(type='text' name='search' value='Пошук:')
+            span.search__icon
         .col-md-6
           a.btn.panel-btn.panel-btn--bookmark(href='#') Закладки
 
