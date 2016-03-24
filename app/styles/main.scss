@@ -1,7 +1,10 @@
 $icon-font-path: '../fonts/';
 
 @import 'vendor/bootstrap';
+@import 'blocks/btn';
 
 @import 'blocks/page-header';
 @import 'blocks/logo-text';
 @import 'blocks/search';
+@import 'blocks/phone';
+@import 'blocks/address';
