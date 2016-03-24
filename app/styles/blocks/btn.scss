@@ -1,0 +1,119 @@
+.btn {
+
+  &-panel {
+
+    width: 150px;
+    font-size: 17px;
+    border-radius: 0;
+    padding: 7px 44px;
+    line-height: 26px;
+    background-color: $brand-primary;
+
+    &:hover {
+
+      background-color: #212a3a;
+      color: #ffffff;
+
+    }
+
+    &:active {
+
+      background: #161d29;
+
+      span {
+
+        opacity: 0.6;
+
+      }
+
+    }
+
+    &--basket {
+
+      text-align: left;
+
+    }
+
+  }
+
+  &-order {
+
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    background-color: $brand-success;
+    
+    &:hover {
+
+      background-color: #5fbb2d;
+      
+    }
+
+    &:active {
+
+      background-color: #518534;
+
+    }
+
+  }
+
+
+  &-imaged {
+
+    position: relative;
+
+    &::before {
+
+      display: inline-block;
+      color: #ffffff;
+      opacity: 0.3;
+      position: absolute;
+      left: 17px;
+      font-family: 'symbols-technomart';
+      font-size: 17px;
+
+    }
+
+    &:hover {
+
+      &::before {
+
+        opacity: 1;
+
+      }
+
+    }
+
+    &:active {
+
+      &::before {
+
+        opacity: 0.6;
+
+      }
+
+    }
+
+    &--bookmark {
+
+      &::before {
+
+        content: '\1f516';
+
+      }
+
+    }
+
+    &--cart {
+
+      &::before {
+
+        content: '\62';
+
+      }
+
+    }
+
+  }
+
+}
