@@ -9,28 +9,40 @@
 
         // Пошук
         .col-md-3
+
           .form-group.search
             input.form-control.search__field#search(type='text' name='search' value='Пошук:')
             span.search__icon
+
         .col-md-6
-          a.btn.panel-btn.panel-btn--bookmark(href='#') Закладки
 
-          a.btn.panel-btn.panel-btn--coin(href='#') Оформити
+          a.btn.btn-panel.btn-imaged.btn-imaged--bookmark(href='#')
+            span Закладки:
+              span 0
 
-          a.btn.panel-btn.panel-btn--basket(href='#') Корзина
+          a.btn.btn-panel.btn-imaged.btn-imaged--cart(href='#')
+            span Корзина:
+              span 0
+
+          a.btn.btn-panel.btn-order(href='#')
+            span Оформити:
+              span 0
 
   .container
     .row
+
       .col-md-4
         a.logo: img(src='http://placehold.it/277x58')
 
       .col-md-4
         include phone
         include address
+
       .col-md-4
         include user-block
 
     .row
+
       .col-md-12
         include menu
 
