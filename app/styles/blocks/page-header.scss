@@ -5,11 +5,14 @@
   &__user-panel {
 
     background-color: $brand-primary;
+    margin-bottom: 47px;
 
   }
 
   [class^='col-'] {
+
     padding: 0;
+
   }
 
 }
