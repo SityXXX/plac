@@ -1,8 +1,59 @@
 .search {
 
-  .form-group {
+  position: relative;
+  margin-bottom: 0;
 
-    margin-bottom: 0;
+  input {
+
+    font-family: 'Cuprum';
+    background-color: transparent;
+    color: #fff;
+    padding-left: 49px;
+
+    &:hover {
+
+      background-color: #212a3a;
+
+    }
+
+    &:focus {
+
+      background-color: #ffffff;
+      color: $gray-base;
+      outline: none;
+
+      & + [class*='icon']::after {
+
+        color: $brand-danger;
+        opacity: 1;
+
+      }
+
+    }
+
+  }
+
+  &__icon::after {
+
+    content: '\1f50d';
+    font-family: 'symbols-technomart';
+    font-size: 17px;
+    position: absolute;
+    left: 17px;
+    top: 9px;
+    display: inline-block;
+    color: #ffffff;
+    opacity: 0.3;
+
+  }
+
+  &:hover {
+
+    &__icon::after {
+
+      opacity: 1;
+
+    }
 
   }
 

@@ -36,6 +36,28 @@
                 27px 27px 0 darken($brand-danger, 20%),
                 28px 28px 0 darken($brand-danger, 20%);
   padding: 3px 0;
+  display: block;
   overflow: hidden;
+
+  &:visited {
+
+    color: #ffffff;
+    background-color: $brand-danger;
+
+  }
+
+  &:hover, &:focus {
+
+    color: #fff;
+    background-color: #ca2c37;
+    outline: none;
+
+  }
+
+  &:active {
+
+    background-color: #ba2732;
+
+  }
 
 }
