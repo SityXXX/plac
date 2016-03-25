@@ -1,17 +1,26 @@
 .page-header {
 
   background-color: $sky;
+  padding-bottom: 60px;
 
   &__user-panel {
 
     background-color: $brand-primary;
     margin-bottom: 47px;
 
+
   }
 
   [class^='col-'] {
 
     padding: 0;
+
+  }
+
+  &__wrapper {
+
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
 
   }
 

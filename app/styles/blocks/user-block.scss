@@ -1,0 +1,39 @@
+.user-block {
+
+  &__user-office {
+
+    background-color: #fff;
+    font-size: 21px;
+    color: #000;
+    font-family: 'Cuprum';
+    padding: 5px 47px;
+    position: relative;
+    display: block;
+
+    &::before, &::after {
+
+      position: absolute;
+      color: #c5c5c5;
+      display: inline-block;
+      font-family: 'symbols-technomart';
+      font-size: 18px;
+
+    }
+
+    &::before {
+
+      content: '\1f468';
+      left: 14px;
+
+    }
+
+    &::after {
+
+      content: '\241b';
+      right: 10px;
+
+    }
+
+  }
+
+}

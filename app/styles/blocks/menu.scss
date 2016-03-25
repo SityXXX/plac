@@ -1,0 +1,30 @@
+.menu {
+
+  .page-header & {
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    background-color: $brand-primary;
+    border-bottom: 3px solid #293449;
+
+    &__item {
+
+      display: table-cell;
+
+    }
+
+    &__link, span {
+
+      @extend .btn;
+      @extend .btn-panel;
+      line-height: 21px;
+      padding: 19px 0 15px;
+
+    }
+
+  }
+
+}
