@@ -2,47 +2,47 @@
   .page-header__user-panel
     .container
       .row
+        .page-header__wrapper
+          // І-нет магазин
+          .col-md-3
+            a.logo-text(href='#') Інтеренет магазин
 
-        // І-нет магазин
-        .col-md-3
-          a.logo-text(href='#') Інтеренет магазин
+          // Пошук
+          .col-md-3
 
-        // Пошук
-        .col-md-3
+            .form-group.search
+              input.form-control.search__field#search(type='text' name='search' value='Пошук:')
+              span.search__icon
 
-          .form-group.search
-            input.form-control.search__field#search(type='text' name='search' value='Пошук:')
-            span.search__icon
+          .col-md-2
 
-        .col-md-6
+            a.btn-panel.btn-imaged.btn-imaged--bookmark(href='#')
+              span Закладки:
+                span 0
 
-          a.btn.btn-panel.btn-imaged.btn-imaged--bookmark(href='#')
-            span Закладки:
-              span 0
+          .col-md-2
+            a.btn-panel.btn-imaged.btn-imaged--cart.btn-imaged--cart-in(href='#')
+              span Корзина:
+                span 0
 
-          a.btn.btn-panel.btn-imaged.btn-imaged--cart(href='#')
-            span Корзина:
-              span 0
-
-          a.btn.btn-panel.btn-order(href='#')
-            span Оформити:
-              span 0
+          .col-md-2
+            a.btn-panel.btn-order(href='#')
+              span Оформити
 
   .container
     .row
+      .page-header__wrapper
+        .col-md-3
+          a.logo: img(src='http://placehold.it/277x58')
 
-      .col-md-4
-        a.logo: img(src='http://placehold.it/277x58')
+        .col-md-5
+          include phone
+          include address
 
-      .col-md-4
-        include phone
-        include address
-
-      .col-md-4
-        include user-block
+        .col-md-4
+          include user-block
 
     .row
-
-      .col-md-12
+      .page-header__wrapper
         include menu
 
