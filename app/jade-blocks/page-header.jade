@@ -16,24 +16,24 @@
 
           .col-md-2
 
-            a.btn-panel.btn-imaged.btn-imaged--bookmark(href='#')
-              span Закладки:
+            a.btn-panel.btn-panel-primary.btn-bookmark(href='#')
+              span.btn__content Закладки:
                 span 0
 
           .col-md-2
-            a.btn-panel.btn-imaged.btn-imaged--cart.btn-imaged--cart-in(href='#')
-              span Корзина:
+            a.btn-panel.btn-panel-primary.btn-cart.btn-panel-primary--alert(href='#')
+              span.btn__content Корзина:
                 span 0
 
           .col-md-2
-            a.btn-panel.btn-order(href='#')
-              span Оформити
+            a.btn-panel.btn-panel-checkout(href='#')
+              span.btn__content Оформити
 
   .container
     .row
       .page-header__wrapper
         .col-md-3
-          a.logo: img(src='http://placehold.it/277x58')
+          a.logo(href='#')
 
         .col-md-5
           include phone
