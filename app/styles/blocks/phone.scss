@@ -1,12 +1,14 @@
 .phone {
 
   position: relative;
+  max-width: 275px;
+  min-width: 200px;
   font-size: 21px;
   font-family: 'Cuprum';
   color: $brand-danger;
   padding: 4px 40px;
   border: 3px solid #ffffff;
-  margin-bottom: 5px;
+  margin: 0 auto 5px auto;
 
   &::before {
 

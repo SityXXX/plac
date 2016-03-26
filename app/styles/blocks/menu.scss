@@ -19,9 +19,9 @@
     &__link, span {
 
       @extend .btn;
-      @extend .btn-panel;
-      line-height: 21px;
-      padding: 19px 0 15px;
+      @extend .btn-block;
+      @include button-size(20px, 20px, 17px, 1, 0);
+      @include button-variant(#ffffff, $brand-primary, transparent);
 
     }
 

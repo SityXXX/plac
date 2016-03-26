@@ -1,158 +1,105 @@
 .btn {
 
+  //
   &-panel {
 
-    display: block;
-    font-size: 17px;
-    border-radius: 0;
-    padding: 8px 44px;
-    line-height: 26px;
-    transition: background-color 0.5s;
-    font-family: 'Cuprum';
-    text-align: center;
-    color: #ffffff;
+    @extend .btn;
+    @extend .btn-block;
+    @include button-size(11px, 11px, 17px, 1, 0);
 
-    span {
+    &-primary {
 
-      opacity: 1;
-      transition: opacity 0.5s;
+      @include button-variant(rgba(255,255,255,1), $brand-primary, transparent);
 
-    }
+      &--alert {
 
-    &::before {
-
-      transition: opacity 0.5s;
-
-    }
-
-    &:hover {
-
-      background-color: #212a3a;
-      color: #ffffff;
-      transition: background-color 0.5s;
-
-      &::before {
-
-        transition: opacity 0.5s;
+        @include button-variant(rgba(255,255,255,1), $brand-danger, transparent);
 
       }
 
     }
 
-    &:active {
+    &-checkout {
 
-      background: #161d29;
-      transition: background-color 0.5s;
+      @include button-variant(#ffffff, $brand-success, transparent);
 
-      span {
+    }
 
-        transition: opacity 0.5s;
-        opacity: 0.6;
+    &:active .btn__content {
 
-      }
+      color: rgba(255,255,255,0.5);
 
     }
 
   }
 
-  &-order {
+  // Text style inside button
+  &__content {
 
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: $brand-success;
+    display: inline-block;
+    vertical-align: middle;
 
-    &:hover {
+  }
 
-      background-color: #5fbb2d;
+  // Imaged buttons
+  &-bookmark, &-cart {
+
+    .btn__content {
+
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+
+        display: inline-block;
+        position: absolute;
+        left: -5px;
+        font-family: 'symbols-technomart';
+        font-size: 17px;
+        color: rgb(255,255,255);
+        color: rgba(255,255,255,0.5);
+
+      }
 
     }
 
-    &:active {
+    // Hover button text transition
+    &:hover .btn__content {
 
-      background-color: #518534;
+      // Hover button image transition
+      &::before {
+
+        color: rgba(255,255,255,1);
+
+      }
+
+    }
+
+    &:active .btn__content::before {
+
+      color: rgba(255,255,255,0.5);
 
     }
 
   }
 
-
-  &-imaged {
-
-    position: relative;
+  // Image for button
+  &-bookmark .btn__content {
 
     &::before {
 
-      display: inline-block;
-      color: #ffffff;
-      opacity: 0.3;
-      position: absolute;
-      left: 17px;
-      font-family: 'symbols-technomart';
-      font-size: 17px;
-
-      @media (min-width: $screen-lg-desktop) {
-
-        left: 30px;
-
-      }
+      content: '\1f516';
 
     }
 
-    &:hover {
+  }
 
-      &::before {
+  // Image for button
+  &-cart .btn__content {
 
-        opacity: 1;
+    &::before {
 
-      }
-
-    }
-
-    &:active {
-
-      &::before {
-
-        opacity: 0.6;
-
-      }
-
-    }
-
-    &--bookmark {
-
-      &::before {
-
-        content: '\1f516';
-
-      }
-
-    }
-
-    &--cart {
-
-      &::before {
-
-        content: '\62';
-
-      }
-
-      &-in {
-
-        background-color: $brand-danger;
-
-        &:hover {
-
-          background-color: #ca2c37;
-
-        }
-
-        &:active {
-
-          background-color: #ba2732;
-
-        }
-
-      }
+      content: '\62';
 
     }
 
