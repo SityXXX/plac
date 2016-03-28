@@ -1,12 +1,33 @@
-.product-filter {
+.product-sort {
 
-  &__heading {
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+  padding: 10px 18px;
+  @include border-bottom-radius(3px);
+  @include border-top-radius(3px);
+  margin-bottom: $line-height-computed;
 
-    text-transform: uppercase;
-    background-color: #f7f3ec;
-    padding: 10px 18px;
-    @include border-bottom-radius(3px);
-    @include border-top-radius(3px);
+  a {
+
+    color: rgb(196,193,187);
+    color: rgba(0,0,0,0.3);
+    display: inline-block;
+    border-bottom: 1px dotted $brand-danger;
+    line-height: 1;
+
+    &:hover {
+
+      color: rgb(0,0,0);
+      border-bottom-style: solid;
+
+    }
+
+    &:active {
+
+      border-bottom: none;
+      color: $brand-danger;
+
+    }
 
   }
 

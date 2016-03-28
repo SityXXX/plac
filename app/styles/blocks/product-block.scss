@@ -1,0 +1,163 @@
+.product-block {
+
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+
+  &:last-child {
+
+    border-right: none;
+
+  }
+
+  &:hover {
+
+    box-shadow: 0 10px 25px 0 rgba(41,52,73,0.5);
+    z-index: 2;
+
+    .product-block__button-block {
+
+      display: block;
+
+    }
+
+    .product-block__img img {
+
+      display: none;
+
+    }
+
+  }
+
+  &--new {
+
+    &::after {
+
+      content: '';
+      position: absolute;
+      right: -7px;
+      top: -6px;
+      width: 79px;
+      height: 79px;
+      background-image: url('../images/label.png');
+      z-index: 1;
+
+    }
+
+  }
+
+  &__img {
+
+    height: 200px;
+    width: 100%;
+    text-align: center;
+
+    img {
+
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+
+    }
+
+  }
+
+  &__info {
+
+    padding: 0 10% 25px;
+
+  }
+
+  &__code {
+
+    text-align: center;
+    color: #a4a4a4;
+
+  }
+
+  &__name {
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5px;
+
+    a {
+
+      text-decoration: underline;
+
+      &:hover {
+
+        text-decoration: none;
+
+      }
+
+    }
+
+  }
+
+  &__in-stock {
+
+    color: $brand-danger;
+    text-align: center;
+    padding: 3px 5px;
+
+  }
+
+  &__old-price {
+
+    color: #999999;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+  &__price {
+
+    text-align: center;
+
+    &-wrap {
+
+      text-align: center;
+      color: #ffffff;
+      font-size: 17px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: $brand-danger;
+      padding: 4px 10px;
+      display: inline-block;
+      @include border-bottom-radius(3px);
+      @include border-top-radius(3px);
+      position: relative;
+      min-width: 115px;
+
+      &::after {
+
+        content: '';
+        border: 16px solid transparent;
+        border-left-color: $brand-danger;
+        position: absolute;
+        right: -31px;
+        top: 0;
+
+      }
+
+    }
+
+  }
+
+  &__button-block {
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+
+  }
+
+}

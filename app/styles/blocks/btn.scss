@@ -47,7 +47,7 @@
     .btn__content {
 
       position: relative;
-      padding-left: 20px;
+      padding-left: 33px;
 
       &::before {
 
@@ -102,6 +102,56 @@
       content: '\62';
 
     }
+
+  }
+
+  &-buy {
+
+    @include button-variant(#ffffff, $brand-success, darken($brand-success,10%));
+    @extend .btn-block;
+    font-size: 14px;
+    padding: 10px 31px 4px 40px;
+    border-radius: 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-transform: uppercase;
+    max-width: 150px;
+    margin: 0 auto;
+
+    .btn__content {
+
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+
+        font-family: 'symbols-technomart';
+        content: '\62';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.2;
+
+      }
+
+    }
+
+  }
+
+  &-in-bookmark {
+
+    @include button-variant($brand-primary, transparent, darken($brand-success,10%));
+    @extend .btn-block;
+    font-size: 14px;
+    padding: 10px 31px 4px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    max-width: 150px;
+    margin: 0 auto;
 
   }
 

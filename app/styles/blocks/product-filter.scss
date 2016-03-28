@@ -1,0 +1,14 @@
+.product-filter {
+
+  &__heading {
+
+    text-transform: uppercase;
+    background-color: #f7f3ec;
+    padding: 10px 18px;
+    @include border-bottom-radius(3px);
+    @include border-top-radius(3px);
+    margin-bottom: $line-height-computed;
+
+  }
+
+}
