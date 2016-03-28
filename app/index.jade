@@ -43,42 +43,29 @@ html(class='no-js' lang='uk')
               include jade-blocks/product-filter
 
           .col-md-9
+            include jade-blocks/product-sort
 
-            .product-sort
+            main.product-category
               .row
-                .col-md-3
-                  span.product-sort__label Сортувати:
-                .col-md-3
-                  a.product-sort__sort-link(href='#') По ціні
-                .col-md-3
-                  a.product-sort__sort-link(href='#') По назві
-                .col-md-3
-                  .row
-                    .col-xs-12
-                      a.product-sort__direction.product-sort__direction--asc(href='#') За зростанням
-                    .col-xs-12
-                      a.product-sort__direction.product-sort__direction--desc(href='#') За спаданням
-            main
-              .row
-                .col-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
-                .col-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
-                .com-md-4
+                article.col-md-4.product-block.product-block--new
                   include jade-blocks/product-block
               .row
-                .col-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
-                .col-md-4
+                article.col-md-4.product-block.product-block--new
                   include jade-blocks/product-block
-                .com-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
               .row
-                .col-md-4
+                article.col-md-4.product-block.product-block--new
                   include jade-blocks/product-block
-                .col-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
-                .com-md-4
+                article.col-md-4.product-block
                   include jade-blocks/product-block
 
             include jade-blocks/pagination
