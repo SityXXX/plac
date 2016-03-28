@@ -2,6 +2,27 @@
 
   height: 75px;
   display: block;
-  background: url('../images/logo-md@1x.png') no-repeat;
+  background: url('../images/logo-lg@1x.png') no-repeat;
+  background-size: 285px 60px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+    background-image: url('../images/logo-lg@2x.png');
+
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+    background-image: url('../images/logo-md@1x.png');
+    background-size: 235px 49px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+      background-image: url('../images/logo-md@2x.png');
+      background-size: 470px 98px;
+
+    }
+
+  }
 
 }

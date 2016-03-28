@@ -2,11 +2,12 @@
 
   background-color: $sky;
   padding-bottom: 60px;
+  margin-bottom: $line-height-computed;
 
   &__user-panel {
 
     background-color: $brand-primary;
-    margin-bottom: 47px;
+    margin-bottom: $line-height-computed*3;
 
 
   }
@@ -21,6 +22,12 @@
 
     padding-left: $grid-gutter-width/2;
     padding-right: $grid-gutter-width/2;
+
+  }
+
+  &__mid-row {
+
+    margin-bottom: 20px;
 
   }
 
