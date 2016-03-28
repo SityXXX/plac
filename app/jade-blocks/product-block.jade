@@ -1,12 +1,16 @@
-article.product
-  .product__label-new Новинка
-  .product__img
-    img(src='http://placehold.it/220x174')
-  .product__code Код товару: (82172)
-  h1.product__name Перфоратор BOSCH BFG 3000
-  .product__in-stock На складі: 4 шт.
-  .product__old-price 2854.00 ГРН
-  .product__price 2530.00 ГРН
-  .product__button-block
-    a.btn.btn-buy(href='#') В корзину
-    a.btn.btn-bookmark(href='#') В закладки
+.product-block__img
+  a(href='#')
+    img(src='../images/bosch@1x.jpg')
+.product-block__info
+  .product-block__code Код товару: (82172)
+  h1.product-block__name
+    a(href='#') Перфоратор BOSCH BFG 3000
+  .product-block__in-stock На складі: 4 шт.
+  .product-block__old-price 2854.00 ГРН
+  .product-block__price
+    .product-block__price-wrap 2530.00 ГРН
+  .product-block__button-block
+    a.btn.btn-buy(href='#')
+      span.btn__content В корзину
+    a.btn.btn-in-bookmark(href='#')
+      span.btn__content В закладки
