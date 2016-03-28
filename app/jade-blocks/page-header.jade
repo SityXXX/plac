@@ -1,4 +1,4 @@
-.page-header
+header.page-header
   .page-header__user-panel
     .container
       .row
@@ -30,16 +30,16 @@
               span.btn__content Оформити
 
   .container
-    .row
+    .row.page-header__mid-row
       .page-header__wrapper
         .col-md-3
           a.logo(href='#')
 
-        .col-md-5
+        .col-md-3.col-md-offset-1
           include phone
           include address
 
-        .col-md-4
+        .col-md-4.col-md-offset-1
           include user-block
 
     .row
