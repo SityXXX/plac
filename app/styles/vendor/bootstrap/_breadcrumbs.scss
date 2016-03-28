@@ -7,7 +7,7 @@
   padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
   margin-bottom: $line-height-computed;
   list-style: none;
-  background-color: $breadcrumb-bg;
+  //background-color: $breadcrumb-bg;
   border-radius: $border-radius-base;
 
   > li {
@@ -19,6 +19,8 @@
       content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
       color: $breadcrumb-color;
+      font-size: 14px;
+      font-family: 'symbols-technomart';
     }
   }
 
