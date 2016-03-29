@@ -21,7 +21,9 @@
       @extend .btn;
       @extend .btn-block;
       @include button-size(20px, 20px, 17px, 1, 0);
-      @include button-variant(#ffffff, $brand-primary, transparent);
+      @include button-variant(#ffffff, $brand-primary, transparent,
+        #ffffff, #212a3a, transparent,
+        rgba(255,255,255,0.5), #161d29, transparent);
 
     }
 
