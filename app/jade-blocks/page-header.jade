@@ -1,48 +1,37 @@
 header.page-header
-  .page-header__user-panel
-    .container
-      .row
-        .page-header__wrapper
-          // І-нет магазин
-          .col-md-3
-            a.logo-text(href='#') Інтеренет магазин
+  .panel
+    .container.clearfix
+      // І-нет магазин
+      a.col-md-3.logo-text(href='#') Інтеренет магазин
 
-          // Пошук
-          .col-md-3
+      // Пошук
+      .search.col-md-3
+        input.search__field#search(type='text' name='search' value='Пошук:')
+        span.search__icon
 
-            .form-group.search
-              input.form-control.search__field#search(type='text' name='search' value='Пошук:')
-              span.search__icon
+      a.panel__button.panel__button-bookmark.col-md-2(href='#')
+        span Закладки:
+          span 0
 
-          .col-md-2
 
-            a.btn-panel.btn-panel-primary.btn-bookmark(href='#')
-              span.btn__content Закладки:
-                span 0
+      a.panel__button.panel__button-cart.col-md-2(href='#')
+        span Корзина:
+          span 0
 
-          .col-md-2
-            a.btn-panel.btn-panel-primary.btn-cart.btn-panel-primary--alert(href='#')
-              span.btn__content Корзина:
-                span 0
 
-          .col-md-2
-            a.btn-panel.btn-panel-checkout(href='#')
-              span.btn__content Оформити
+      a.panel__button.col-md-2(href='#')
+        span Оформити
 
   .container
-    .row.page-header__mid-row
-      .page-header__wrapper
-        .col-md-3
-          a.logo(href='#')
+    .clearfix
 
-        .col-md-3.col-md-offset-1
-          include phone
-          include address
+      a.logo.col-md-3(href='#')
 
-        .col-md-4.col-md-offset-1
-          include user-block
+      .contacts.col-md-3.col-md-offset-1
+        include contacts
 
-    .row
-      .page-header__wrapper
-        include menu
+      .user-block.col-md-4.col-md-offset-1
+        include user-block
+
+    include menu
 

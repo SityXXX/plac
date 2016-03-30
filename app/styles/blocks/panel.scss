@@ -1,0 +1,89 @@
+.panel {
+
+  background-color: $brand-primary;
+  margin-bottom: $line-height-computed*3;
+
+  &__button {
+
+    display: block;
+    padding: 12px 10px;
+    font-size: 17px;
+    line-height: 1;
+    font-family: 'Cuprum';
+    touch-action: manipulation;
+    background-color: $brand-primary;
+    color: #ffffff;
+    text-align: center;
+
+  }
+
+  &
+
+  &__button-bookmark, &__button-cart {
+
+    & > span {
+
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      padding-left: 12px;
+
+      &::before {
+
+        display: inline-block;
+        position: absolute;
+        left: -12px;
+        font-family: 'symbols-technomart';
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255, 0.5);
+
+      }
+
+    }
+
+    &:hover, &:focus {
+
+      color: rgb(255,255,255);
+      background-color: #212a3a;
+
+      & span::before {
+
+        color: rgb(255,255,255);
+
+      }
+
+    }
+
+    &:active {
+
+      color: rgb(255,255,255);
+      color: rgba(255,255,255,0.6);
+      background-color: #161d29;
+
+      & span::before {
+
+        color: rgb(255,255,255);
+        color: rgba(255,255,255,0.5);
+
+      }
+
+    }
+
+  }
+
+
+
+  &__button-bookmark > span::before {
+
+    content: '\1f516';
+
+  }
+
+  &__button-cart > span::before {
+
+    content: '\62';
+
+  }
+
+}

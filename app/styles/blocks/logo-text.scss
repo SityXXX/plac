@@ -39,13 +39,6 @@
   display: block;
   overflow: hidden;
 
-  &:visited {
-
-    color: #ffffff;
-    background-color: $brand-danger;
-
-  }
-
   &:hover, &:focus {
 
     color: #fff;

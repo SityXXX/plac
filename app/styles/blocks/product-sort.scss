@@ -7,7 +7,7 @@
   @include border-top-radius(3px);
   margin-bottom: $line-height-computed;
 
-  a {
+  &__sort-link {
 
     color: rgb(196,193,187);
     color: rgba(0,0,0,0.3);
@@ -26,6 +26,48 @@
 
       border-bottom: none;
       color: $brand-danger;
+
+    }
+
+  }
+
+  &__direction {
+
+    border-top: 9px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 6px solid transparent;
+    font-size: 0;
+
+    &-asc {
+
+      border-top-color: #c6c2bd;
+      border-bottom-width: 0;
+
+      &--active {
+
+        //border-top-color: ;
+
+      }
+
+      &:hover {
+
+        border-top-color: $gray-base;
+
+      }
+
+    }
+
+    &-desc {
+
+      border-bottom-color: #c6c2bd;
+      border-top-width: 0;
+
+      &:hover {
+
+        border-bottom-color: $gray-base;
+
+      }
 
     }
 

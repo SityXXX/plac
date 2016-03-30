@@ -3,6 +3,6 @@ nav
     - var list = ['Гловна','Каталог','Про Нас','Знижки','Спецпропозиції','Доставка','Контакти']
     each item in list
       if item == 'Каталог'
-        li.menu__item: span= item
+        li.menu__item.menu__item--active: span= item
       else
-        li.menu__item: a.menu__link(href='#')= item
+        li.menu__item: a(href='#')= item
