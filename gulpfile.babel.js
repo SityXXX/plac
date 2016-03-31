@@ -99,7 +99,7 @@ gulp.task('jade', () => {
     .pipe(gulpJade({
       pretty: true
     }))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('.tmp'));
 });
 
 gulp.task('html', ['styles', 'scripts'], () => {
@@ -133,7 +133,6 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html',
     '!app/*.jade'
   ], {
     dot: true
@@ -157,7 +156,7 @@ gulp.task('serve', ['jade','styles', 'scripts', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
+    'app/*.jade',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);

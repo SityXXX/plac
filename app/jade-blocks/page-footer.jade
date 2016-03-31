@@ -1,23 +1,26 @@
 footer.page-footer
-  .container
-    .row.page-footer__top
-      .col-md-5
-        a(href='#').logo-text Інтернет магазин
-        .contacts__address м.Дрогобич, вул.Гайдамацька 7/1 <br/> (0324) 41-75-75, 417-317
-      .col-md-7
-        include menu
-        include menu
-    .row.page-footer__bottom
-      .col-md-4
-        .copyright &copy; 2010–2016 Компанія «Пляц»
-          | Усі права захищено
-      .col-md-4
-        include social
-      .col-md-4
-        .row
-          .col-xs-6
-            .page-footer__link-block Зворотній зв'язок
-              a(href='mailto:mail@plac.com.ua') mail@plac.com.ua
-          .col-xs-6
-            .page-footer__link-block Телефонуйте
-              span +38 (067) 477-44-53
+  .page-footer__top
+    .container
+      .row
+        .col-md-5
+          a.logo-text(href='#') ВБМ Пляц
+          .contacts
+            .contacts__address м.Дрогобич, вул.Гайдамацька 7/1 <br/> (0324) 41-75-75, 417-317
+        .col-md-7
+          include menu
+          include menu
+  .page-footer__bottom
+    .container
+      .row
+        .col-md-4
+          .copyright &copy; 2010–2016 Компанія «Пляц»<br>Усі права захищено
+        .col-md-4
+          include social
+        .col-md-4
+          .row
+            .col-xs-6
+              .page-footer__link-block Зворотній зв'язок
+                a(href='mailto:mail@plac.com.ua') mail@plac.com.ua
+            .col-xs-6
+              .page-footer__link-block Телефонуйте
+                span +38 (067) 477-44-53

@@ -10,6 +10,14 @@
     text-align: left;
     padding-left: 20px;
 
+    .page-footer & {
+
+      color: #ffffff;
+      font-size: 18px;
+      padding-left: 0;
+
+    }
+
   }
 
   &__phone {
