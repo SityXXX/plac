@@ -29,7 +29,7 @@
           <!-- Пошук-->
           <div class="search col-md-3">
             <input id="search" type="text" name="search" value="Пошук:" class="search__field"><span class="search__icon"></span>
-          </div><a href="#" class="panel__button panel__button-bookmark col-md-2"><span>Закладки:<span>0</span></span></a><a href="#" class="panel__button panel__button-cart col-md-2"><span>Корзина:<span>0</span></span></a><a href="#" class="panel__button col-md-2"><span>Оформити</span></a>
+          </div><a href="#" class="panel__button panel__button-bookmark col-md-2"><span>Закладки:<span>0</span></span></a><a href="#" class="panel__button panel__button-cart panel__button-cart--contained col-md-2"><span>Корзина:<span>0</span></span></a><a href="#" class="panel__button panel__button-checkout col-md-2"><span>Оформити</span></a>
         </div>
       </div>
       <div class="container">
@@ -63,7 +63,7 @@
     </header>
     <nav class="container">
       <ul class="breadcrumb">
-        <li><a href="#"></a></li>
+        <li class="breadcrumb__item"><a href="#"></a></li>
         <li><a href="#">Інструмент</a></li>
         <li><span class="active">Перфоратори</span></li>
       </ul>
@@ -118,11 +118,11 @@
                 <div class="col-md-7"><span class="product-sort__label">Сортувати:</span></div>
                 <div class="col-md-2"><a href="#" class="product-sort__sort-link">За ціною</a></div>
                 <div class="col-md-2"><a href="#" class="product-sort__sort-link">За назвою</a></div>
-                <div class="col-md-1"><span class="product-sort__direction product-sort__direction-asc">За зростанням</span><a href="#" class="product-sort__direction product-sort__direction-desc">За спаданням</a></div>
+                <div class="col-md-1"><a href="#" class="product-sort__direction product-sort__direction-asc">За зростанням</a><a href="#" class="product-sort__direction product-sort__direction-desc">За спаданням</a></div>
               </div>
             </div>
-            <main class="product-category">
-              <div class="row">
+            <main>
+              <div class="clearfix">
                 <article class="col-md-4 product-block">
                   <div class="product-block__img"><a href="#"><img src="../images/bosch@1x.jpg"></a></div>
                   <div class="product-block__info">
@@ -133,7 +133,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block">
@@ -146,7 +146,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block product-block--new">
@@ -159,11 +159,11 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
               </div>
-              <div class="row">
+              <div class="clearfix">
                 <article class="col-md-4 product-block">
                   <div class="product-block__img"><a href="#"><img src="../images/bosch@1x.jpg"></a></div>
                   <div class="product-block__info">
@@ -174,7 +174,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block product-block--new">
@@ -187,7 +187,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block">
@@ -200,11 +200,11 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
               </div>
-              <div class="row">
+              <div class="clearfix">
                 <article class="col-md-4 product-block product-block--new">
                   <div class="product-block__img"><a href="#"><img src="../images/bosch@1x.jpg"></a></div>
                   <div class="product-block__info">
@@ -215,7 +215,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block">
@@ -228,7 +228,7 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
                 <article class="col-md-4 product-block">
@@ -241,18 +241,18 @@
                     <div class="product-block__price">
                       <div class="product-block__price-wrap">2530.00 ГРН</div>
                     </div>
-                    <div class="product-block__button-block"><a href="#" class="btn btn-buy"><span class="btn__content">В корзину</span></a><a href="#" class="btn btn-in-bookmark"><span class="btn__content">В закладки</span></a></div>
+                    <div class="product-block__button-block"><a href="#" class="product-block__button product-block__button-buy"><span>В корзину</span></a><a href="#" class="product-block__button product-block__button-in-bookmark"><span>В закладки</span></a></div>
                   </div>
                 </article>
               </div>
             </main>
             <nav>
               <ul class="pagination">
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">Наступна</a></li>
+                <li class="pagination__item pagination__item--active"><span>1</span></li>
+                <li class="pagination__item"><a href="#">2</a></li>
+                <li class="pagination__item"><a href="#">3</a></li>
+                <li class="pagination__item"><a href="#">4</a></li>
+                <li class="pagination__item"><a href="#">Наступна</a></li>
               </ul>
             </nav>
           </div>

@@ -3,6 +3,7 @@
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   background-color: #ffffff;
+  padding: 0;
 
   &:last-child {
 
@@ -29,20 +30,16 @@
 
   }
 
-  &--new {
+  &--new::after {
 
-    &::after {
-
-      content: '';
-      position: absolute;
-      right: -7px;
-      top: -6px;
-      width: 79px;
-      height: 79px;
-      background-image: url('../images/label.png');
-      z-index: 1;
-
-    }
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: -6px;
+    width: 79px;
+    height: 79px;
+    background-image: url('../images/label.png');
+    z-index: 1;
 
   }
 

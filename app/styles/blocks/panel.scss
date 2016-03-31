@@ -8,23 +8,34 @@
     display: block;
     padding: 12px 10px;
     font-size: 17px;
-    line-height: 1;
+    line-height: 1.1;
     font-family: 'Cuprum';
     touch-action: manipulation;
     background-color: $brand-primary;
     color: #ffffff;
     text-align: center;
 
-  }
+    &:hover, &:focus {
 
-  &
+      color: rgb(255,255,255);
+
+    }
+
+    &:active {
+
+      color: rgb(255,255,255);
+      color: rgba(255,255,255,0.6);
+
+    }
+
+  }
 
   &__button-bookmark, &__button-cart {
 
     & > span {
 
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       position: relative;
       padding-left: 12px;
 
@@ -33,6 +44,7 @@
         display: inline-block;
         position: absolute;
         left: -12px;
+        line-height: 1;
         font-family: 'symbols-technomart';
         font-size: 17px;
         color: rgb(255, 255, 255);
@@ -44,7 +56,6 @@
 
     &:hover, &:focus {
 
-      color: rgb(255,255,255);
       background-color: #212a3a;
 
       & span::before {
@@ -57,8 +68,6 @@
 
     &:active {
 
-      color: rgb(255,255,255);
-      color: rgba(255,255,255,0.6);
       background-color: #161d29;
 
       & span::before {
@@ -70,9 +79,25 @@
 
     }
 
+    &--contained {
+
+      background-color: $brand-danger;
+
+      &:hover, &:focus {
+
+        background-color: darken($brand-danger, 10%);
+
+      }
+
+      &:active {
+
+        background-color: darken($brand-danger, 20%);
+
+      }
+
+    }
+
   }
-
-
 
   &__button-bookmark > span::before {
 
@@ -83,6 +108,24 @@
   &__button-cart > span::before {
 
     content: '\62';
+
+  }
+
+  &__button-checkout {
+
+    background-color: $brand-success;
+
+    &:hover, &:focus {
+
+      background-color: #5fbb2d;
+
+    }
+
+    &:active {
+
+      background-color: #518534;
+
+    }
 
   }
 
