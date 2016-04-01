@@ -1,59 +1,116 @@
 .menu {
 
-  .page-header & {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  background-color: $brand-primary;
+  @include box-shadow(inset 0 -5px 0 0 #1d2739);
 
-    padding: 0;
-    margin: 0;
-    margin-top: 40px;
-    list-style-type: none;
-    display: table;
-    width: 100%;
-    background-color: $brand-primary;
-    @include box-shadow(inset 0 -5px 0 0 #1d2739);
+  .page-footer & {
 
-    &__item {
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: right;
 
-      display: table-cell;
+  }
 
-      & > a, & > span {
+  &__item {
 
-        display: block;
-        touch-action: manipulation;
-        padding: 21px 20px;
-        font-size: 17px;
-        line-height: 1.1;
+    display: table-cell;
+
+    .page-footer & {
+
+      display: inline-block;
+      vertical-align: top;
+
+      &:not(:last-child) {
+
+        margin-right: 60px;
+        margin-bottom: 25px;
+
+      }
+
+    }
+
+    & > a, & > span {
+
+      display: block;
+      touch-action: manipulation;
+      padding: 21px 20px;
+      font-size: 17px;
+      line-height: 1.1;
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Cuprum';
+
+      .page-footer & {
+
+        display: inline;
+        background-color: transparent;
+        padding: 0;
+
+      }
+
+    }
+
+    & > a {
+
+      .page-footer & {
+
+        color: #ffd180;
+        text-decoration: underline;
+
+      }
+
+      &:hover,
+      &:focus {
+
         color: #ffffff;
-        text-align: center;
-        font-family: 'Cuprum';
+        background-color: #212a3a;
 
-      }
+        .page-footer & {
 
-      & > a {
-
-        &:hover,
-        &:focus {
-
-          color: #ffffff;
-          background-color: #212a3a;
-
-        }
-
-        &:active {
-
-          color: rgb(255,255,255);
-          color: rgba(255,255,255,0.5);
-          background-color: #161d29;
+          background-color: transparent;
+          color: #ffd180;
+          text-decoration: none;
 
         }
 
       }
 
-      &--active > span {
+      &:active {
 
-        color: rgb(255, 255, 255);
-        color: rgba(255, 255, 255, 0.5);
+        color: rgb(255,255,255);
+        color: rgba(255,255,255,0.5);
         background-color: #161d29;
-        margin-bottom: -5px;
+
+        .page-footer & {
+
+          color: rgb(173,179,111);
+          color: rgba(255,209,128,0.5);
+
+        }
+
+      }
+
+    }
+
+    &--active > span {
+
+      color: rgb(255, 255, 255);
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #161d29;
+      margin-bottom: -5px;
+
+      .page-footer & {
+
+        color: #ffffff;
+        margin-bottom: 0;
+        text-decoration: none;
 
       }
 

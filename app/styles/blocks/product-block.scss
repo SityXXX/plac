@@ -203,7 +203,16 @@
 
       &:hover, &:focus {
 
+        color: #ffffff;
+        background-color: #5fbb2d;
 
+      }
+
+      &:active {
+
+        color: #ffffff;
+        background-color: #518534;
+        border-bottom-color: transparent;
 
       }
 
@@ -213,6 +222,21 @@
 
       background-color: #ffffff;
       border: 3px solid $brand-success;
+
+      &:hover, &:active {
+
+        border-color: $brand-primary;
+
+      }
+
+      &:active {
+
+        border-color: rgb(193,198,206);
+        border-color: rgba(50,66,92,0.3);
+        color: rgb(193,198,206);
+        color: rgba(50,66,92,0.3);
+
+      }
 
     }
 
