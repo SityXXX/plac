@@ -1,0 +1,59 @@
+.social {
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 0;
+  text-align: center;
+
+  &__item {
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px;
+
+  }
+
+  &__link {
+
+    display: block;
+    width: 41px;
+    height: 41px;
+    background-color: #212a3a;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+
+      position: absolute;
+      font-size: 18px;
+      line-height: 1em;
+      color: #ffffff;
+      font-family: 'symbols-technomart';
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+
+    }
+
+    &--vk::before {
+
+      content: '\76';
+
+    }
+
+    &--fb::before {
+
+      content: '\66';
+
+    }
+
+    &--tw::before {
+
+      content: '\74';
+
+    }
+
+  }
+
+}
