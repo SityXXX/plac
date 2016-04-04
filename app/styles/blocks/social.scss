@@ -36,6 +36,18 @@
 
     }
 
+    &:hover, &:focus {
+
+      background-color: $brand-danger;
+
+    }
+
+    &:active {
+
+      background-color: $brand-danger;
+
+    }
+
     &--vk::before {
 
       content: '\76';

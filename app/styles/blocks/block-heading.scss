@@ -6,6 +6,19 @@
   padding: 30px;
   margin-top: 0;
   margin-bottom: $line-height-computed;
-  font-family: 'Cuprum';
+  font-family: 'Cuprum','Helvetica','Verdana',sans-serif;
+  text-transform: uppercase;
+
+  &--module {
+
+    background-color: #f7f3ec;
+
+  }
+
+  &__button {
+
+
+
+  }
 
 }

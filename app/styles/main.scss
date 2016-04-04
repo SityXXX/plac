@@ -1,6 +1,7 @@
 $icon-font-path: '../fonts/';
 
 @import 'vendor/bootstrap';
+@import 'scafolding/global';
 
 @import 'blocks/panel';
 @import 'blocks/page-header';
@@ -14,8 +15,10 @@ $icon-font-path: '../fonts/';
 @import 'blocks/block-heading';
 @import 'blocks/product-sort';
 @import 'blocks/product-filter';
+@import 'blocks/products';
 @import 'blocks/product-block';
 @import 'blocks/pagination';
 @import 'blocks/category-desc';
 @import 'blocks/page-footer';
 @import 'blocks/social';
+@import 'blocks/tile';

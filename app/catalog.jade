@@ -1,0 +1,97 @@
+doctype html
+html(class='no-js' lang='uk')
+  head
+    title Пляц - Великий Будівельний Магазин
+    meta(charset='utf8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon' href='apple-touch-icon.png')
+
+    // build:css styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+
+    // build:css styles/main.css
+
+    link(rel='stylesheet' href='styles/main.css')
+    // endbuild
+
+    // build:js scripts/vendor/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/Headhesive.js/dist/headhesive.js')
+    // endbower
+    // endbuild
+  body
+
+    include jade/blocks/page-header
+
+    include jade/blocks/breadcrumbs
+
+    .page-content
+      .container
+        h1.block-heading Перфоратори
+        .row
+
+          .col-md-3
+            aside.left-side
+              include jade/blocks/product-filter
+
+          .col-md-9
+            include jade/blocks/product-sort
+
+            main.products
+              .products__row
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+                article.col-md-4.product-block.new
+                  include jade/blocks/product-block
+
+              .products__row
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+                article.col-md-4.product-block.new
+                  include jade/blocks/product-block
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+
+              .products__row
+                article.col-md-4.product-block.new
+                  include jade/blocks/product-block
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+                article.col-md-4.product-block
+                  include jade/blocks/product-block
+
+            include jade/blocks/pagination
+
+    include jade/blocks/category-desc
+
+    include jade/blocks/page-footer
+
+    // build:js scripts/plugins.js
+
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    // endbuild
+
+    // build:js scripts/main.js
+
+    script(src='scripts/main.js')
+    // endbuild

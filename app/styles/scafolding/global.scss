@@ -1,0 +1,18 @@
+.new::after {
+
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  width: 79px;
+  height: 79px;
+  background-image: url('../images/label.png');
+  z-index: 1;
+
+}
+
+.module {
+
+  margin-bottom: 20px;
+
+}

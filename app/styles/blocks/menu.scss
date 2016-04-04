@@ -21,6 +21,7 @@
   &__item {
 
     display: table-cell;
+    position: relative;
 
     .page-footer & {
 
@@ -46,7 +47,7 @@
       line-height: 1.1;
       color: #ffffff;
       text-align: center;
-      font-family: 'Cuprum';
+      font-family: 'Cuprum','Helvetica','Verdana',sans-serif;
 
       .page-footer & {
 
@@ -100,18 +101,32 @@
 
     }
 
-    &--active > span {
+    &--active {
 
-      color: rgb(255, 255, 255);
-      color: rgba(255, 255, 255, 0.5);
-      background-color: #161d29;
-      margin-bottom: -5px;
+      & > span {
 
-      .page-footer & {
+        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255, 0.5);
+        background-color: #161d29;
 
-        color: #ffffff;
-        margin-bottom: 0;
-        text-decoration: none;
+        .page-footer & {
+
+          color: #ffffff;
+          text-decoration: none;
+
+        }
+
+      }
+
+      .page-header &::after {
+
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+        margin-left: -8px;
 
       }
 

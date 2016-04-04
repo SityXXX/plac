@@ -27,69 +27,75 @@ html(class='no-js' lang='uk')
     // endbower
     // endbuild
   body
+    include jade/mixins/tile
 
-    include jade-blocks/page-header
+    include jade/blocks/page-header
 
-    include jade-blocks/breadcrumbs
-
-    .page-content
-      .container
-        h1.block-heading Перфоратори
+    .page-content.container
+      .custom-block
         .row
+          .col-md-4
+            +tile('Фарби','На будь-який смак')(class='tile--paint new')
+          .col-md-4
+            +tile('Інструмент','На любі випадки')(class='tile--tools')
+          .col-md-4
+            +tile('Механізми','Для будови')(class='tile--mechanism')
 
-          .col-md-3
-            aside.left-side
-              include jade-blocks/product-filter
+        .row
+          .col-md-8
+            .slider
+          .col-md-4
+            +tile('Знижки до 10%','На 5000 товарів')(class='tile--discount')
+            +tile('Доставка','Безкоштован*')(class='tile--delivery new')
 
-          .col-md-9
-            include jade-blocks/product-sort
+      .module.module--popular
+        h2.block-heading.block-heading--module Популярні товари:
+        .products
+          .products__row
+            article.col-md-3.product-block.new
+              include jade/blocks/product-block
+            article.col-md-3.product-block
+              include jade/blocks/product-block
+            article.col-md-3.product-block
+              include jade/blocks/product-block
+            article.col-md-3.product-block
+              include jade/blocks/product-block
 
-            main
-              .clearfix
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
-                article.col-md-4.product-block.product-block--new
-                  include jade-blocks/product-block
-              .clearfix
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
-                article.col-md-4.product-block.product-block--new
-                  include jade-blocks/product-block
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
-              .clearfix
-                article.col-md-4.product-block.product-block--new
-                  include jade-blocks/product-block
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
-                article.col-md-4.product-block
-                  include jade-blocks/product-block
+      .module.module--last
+        h2.block-heading.block-heading--module Останні надходження:
+        .products
+          .products__row
+            article.col-md-3.product-block
+              include jade/blocks/product-block
+            article.col-md-3.product-block
+              include jade/blocks/product-block
+            article.col-md-3.product-block
+              include jade/blocks/product-block
+            article.col-md-3.product-block.new
+              include jade/blocks/product-block
 
-            include jade-blocks/pagination
 
-    include jade-blocks/category-desc
 
-    include jade-blocks/page-footer
 
-    // build:js scripts/plugins.js
+    include jade/blocks/page-footer
 
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
-    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
-    // endbuild
+      // build:js scripts/plugins.js
 
-    // build:js scripts/main.js
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+      script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+      // endbuild
 
-    script(src='scripts/main.js')
-    // endbuild
+      // build:js scripts/main.js
+
+      script(src='scripts/main.js')
+      // endbuild

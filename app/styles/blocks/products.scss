@@ -1,0 +1,15 @@
+.products {
+
+  &__row {
+
+    @extend .clearfix;
+
+    &:last-child .product-block {
+
+      border-bottom-color: transparent;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,153 @@
+.tile {
+
+  padding: 20px 120px 30px 20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 122px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+  }
+
+  &--paint {
+
+    background-color: #f6b22d;
+
+    &::before {
+
+      background-image: url('../images/paint@1x.png');
+      background-size: 44px 65px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+        background-image: url('../images/paint@2x.png');
+
+      }
+
+    }
+
+  }
+
+  &--tools {
+
+    background-color: #4aafde;
+
+    &::before {
+
+      background-image: url('../images/tools@1x.png');
+      background-size: 76px 61px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+        background-image: url('../images/tools@2x.png');
+
+      }
+
+    }
+
+  }
+
+  &--mechanism {
+
+    background-color: #cc79d1;
+
+    &::before {
+
+      background-image: url('../images/mechanism@1x.png');
+      background-size: 26px 65px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+        background-image: url('../images/mechanism@2x.png');
+
+      }
+
+    }
+
+  }
+
+  &--discount {
+
+    background-color: #85d179;
+
+    &::before {
+
+      background-image: url('../images/discount@1x.png');
+      background-size: 60px 72px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+        background-image: url('../images/discount@2x.png');
+
+      }
+
+    }
+
+  }
+
+  &--delivery {
+
+    background-color: #f6b22d;
+
+    &::before {
+
+      background-image: url('../images/delivery@1x.png');
+      background-size: 79px 64px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+        background-image: url('../images/delivery@2x.png');
+
+      }
+
+    }
+
+  }
+
+  &__heading {
+
+    font-size: 24px;
+    font-family: 'Cuprum';
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+  }
+
+  &__btn {
+
+    width: 135px;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Cuprum','Helvetica','Verdana', sans-serif;
+    text-transform: uppercase;
+    border-radius: $border-radius-base;
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+
+    &:hover, &:focus {
+
+      color: #ffffff;
+      background-color: rgba(0,0,0,0.2);
+
+    }
+
+    &:active {
+
+      color: #ffffff;
+      background-color: rgba(0,0,0,0.3);
+
+    }
+
+  }
+
+}
