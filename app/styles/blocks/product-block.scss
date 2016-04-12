@@ -5,6 +5,12 @@
   background-color: #ffffff;
   padding: 0;
 
+  @media (max-width: $screen-xs-max) {
+
+    border-right-color: transparent;
+
+  }
+
   &:last-child {
 
     border-right-color: transparent;
@@ -56,6 +62,7 @@
 
     text-align: center;
     color: #a4a4a4;
+    margin-bottom: 25px;
 
   }
 
@@ -85,8 +92,7 @@
 
     color: $brand-success;
     text-align: center;
-    padding: 3px 5px;
-    font-weight: bold;
+    margin-bottom: 15px;
 
   }
 
@@ -98,6 +104,7 @@
     text-decoration: line-through;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 5px;
 
   }
 
@@ -132,6 +139,12 @@
       }
 
     }
+
+  }
+
+  &__unit {
+
+    text-transform: lowercase;
 
   }
 

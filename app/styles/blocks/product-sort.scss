@@ -38,21 +38,24 @@
     border-bottom: 9px solid transparent;
     border-left: 6px solid transparent;
     font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
 
     &-asc {
 
       border-top-color: #c6c2bd;
       border-bottom-width: 0;
-
-      &--active {
-
-        //border-top-color: ;
-
-      }
+      margin-right: 10px;
 
       &:hover {
 
         border-top-color: $gray-base;
+
+      }
+
+      &--active {
+
+        border-top-color: $brand-danger;
 
       }
 
@@ -66,6 +69,12 @@
       &:hover {
 
         border-bottom-color: $gray-base;
+
+      }
+
+      &--active {
+
+        border-bottom-color: $brand-danger;
 
       }
 

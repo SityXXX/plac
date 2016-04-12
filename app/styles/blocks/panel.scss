@@ -15,6 +15,12 @@
     color: #ffffff;
     text-align: center;
 
+    @media (max-width: $screen-xs-max) {
+
+      background-color: darken($brand-primary, 5%);
+
+    }
+
     &:hover, &:focus {
 
       color: rgb(255,255,255);
