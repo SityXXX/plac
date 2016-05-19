@@ -38,29 +38,6 @@
 
   &__button-bookmark, &__button-cart {
 
-    & > span {
-
-      display: inline-block;
-      vertical-align: top;
-      position: relative;
-      padding-left: 12px;
-
-      &::before {
-
-        display: inline-block;
-        position: absolute;
-        vertical-align: middle;
-        left: -12px;
-        line-height: 1;
-        font-family: 'symbols-technomart';
-        font-size: 17px;
-        color: rgb(255, 255, 255);
-        color: rgba(255, 255, 255, 0.5);
-
-      }
-
-    }
-
     &:hover, &:focus {
 
       background-color: #212a3a;
@@ -106,13 +83,36 @@
 
   }
 
-  &__button-bookmark > span::before {
+  &__button-inner {
+
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-left: 12px;
+
+    &::before {
+
+      display: inline-block;
+      position: absolute;
+      vertical-align: middle;
+      left: -12px;
+      line-height: 1;
+      font-family: 'symbols-technomart';
+      font-size: 17px;
+      color: rgb(255, 255, 255);
+      color: rgba(255, 255, 255, 0.5);
+
+    }
+
+  }
+
+  &__button-bookmark-inner::before {
 
     content: '\1f516';
 
   }
 
-  &__button-cart > span::before {
+  &__button-cart-inner::before {
 
     content: '\62';
 
